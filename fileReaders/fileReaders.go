@@ -4,6 +4,6 @@ import (
 	"fmt"
 )
 
-func Get_Test_Data() {
-	fmt.Println("File reader")
+func Get_Test_Data(file_name string) {
+	fmt.Printf("Read file %v", file_name)
 }
