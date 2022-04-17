@@ -24,8 +24,8 @@ func main() {
 	// Read results file data and log it to the console
 	results := Fr.Read_Results_Data("results.txt")
 	for _, result := range results {
-		fmt.Printf("The shortest path from %v to %v has length %v and is defined as follows:\n", result.src, result.dst, result.weight)
-		fmt.Println(result.path)
+		fmt.Printf("The shortest path from %v to %v has length %v and is defined as follows:\n", result.Src, result.Dst, result.Weight)
+		fmt.Println(result.Path)
 		fmt.Println("\n")
 
 	}

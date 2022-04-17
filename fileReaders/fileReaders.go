@@ -5,9 +5,9 @@ func Get_Test_Data(file_name string) (srcNodes []string, dstNodes []string) {
 }
 
 type Edge struct {
-	u int
-	v int
-	w int
+	U int
+	V int
+	W int
 }
 
 func Get_All_Edges(file_name string) (edges []Edge) {
@@ -15,8 +15,8 @@ func Get_All_Edges(file_name string) (edges []Edge) {
 }
 
 type Node struct {
-	id   int
-	name string
+	Id   int
+	Name string
 }
 
 func Get_All_Nodes(file_name string) (nodes []Node) {
@@ -25,10 +25,10 @@ func Get_All_Nodes(file_name string) (nodes []Node) {
 
 // Define results structure
 type Result struct {
-	src    string
-	dst    string
-	weight int
-	path   string
+	Src    string
+	Dst    string
+	Weight int
+	Path   string
 }
 
 func Read_Results_Data(file_name string) (results []Result) {
