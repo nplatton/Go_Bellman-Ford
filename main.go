@@ -9,16 +9,16 @@ import (
 
 func main() {
 	// Return two array from file data
-	srcCities, dstCities := Fr.Get_Test_Data("test.txt")
-	fmt.Println(srcCities, dstCities)
+	srcNodes, dstNodes := Fr.Get_Test_Data("test.txt")
+	fmt.Println(srcNodes, dstNodes)
 	
 	// Loop through the elements for the arrays
-	for i:=0; i<len(srcCities); i++ {
-		srcCity, dstCity := srcCities[i], dstCities[i]
-		// Perform Bellman-Ford on each pair of cities in the arrays
-		weight, path := BellmanFord(srcCity, dstCity)
+	for i:=0; i<len(srcNodes); i++ {
+		srcNode, dstNode := srcNodes[i], dstNodes[i]
+		// Perform Bellman-Ford on each pair of nodes in the arrays
+		weight, path := BellmanFord(srcNode, dstNode)
 		// Write data to a result file
-		Fw.Write_Result_Data(srcCity, dstCity, weight, path)
+		Fw.Write_Result_Data(srcNode, dstNode, weight, path)
 	}
 
 	// Read results file data and log it to the console
