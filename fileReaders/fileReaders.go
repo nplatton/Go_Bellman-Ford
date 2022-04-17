@@ -5,9 +5,8 @@ func Get_Test_Data(file_name string) (srcNodes []string, dstNodes []string) {
 }
 
 type Edge struct {
-	U int
-	V int
-	W int
+	U, V string
+	W    int
 }
 
 func Get_All_Edges(file_name string) (edges []Edge) {

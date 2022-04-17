@@ -11,9 +11,9 @@ func Find_Node_Ids(src_name, dst_name string) (srcID, dstID int) {
 	srcID, dstID = -1, -1
 	// Calculate the node ids
 	for i:=0; i<len(nodes); i++ {
-		if nodes[i].name == src_name {
+		if nodes[i].Name == src_name {
 			srcID = i
-		} else if nodes[i].name == dst_name {
+		} else if nodes[i].Name == dst_name {
 			dstID = i
 		}
 		if srcID!=-1 && dstID!=-1 {
@@ -28,8 +28,8 @@ func Find_Node_Name(node_id int) string {
 	nodes := Fr.Get_All_Nodes("data.txt")
 	// Calculate the node ids
 	for i:=0; i<len(nodes); i++ {
-		if nodes[i].id == node_id {
-			return nodes[i].name
+		if nodes[i].Id == node_id {
+			return nodes[i].Name
 		}
 	}
 	return ""

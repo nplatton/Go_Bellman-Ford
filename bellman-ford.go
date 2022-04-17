@@ -32,9 +32,9 @@ func BellmanFord(srcNode string, dstNode string) (totalWeight int, path []string
 		for j:=0; j<len(edges); j++ {
 
 			// Extract necessary data from the edges
-			startNode := edges[j].u
-			endNode := edges[j].v
-			weight := edges[j].w
+			startNode := edges[j].U
+			endNode := edges[j].V
+			weight := edges[j].W
 			// Get the ids of the start and end nodes
 			startId, endId := Find_Node_Ids(startNode, endNode)
 
@@ -75,7 +75,7 @@ func BellmanFord(srcNode string, dstNode string) (totalWeight int, path []string
 	n := 1
 	for currentIndex := dstId; currentIndex!=srcId; {
 		nextNodeId := predecessors[currentIndex]
-		path = append(path, nodes[nextNodeId].name)
+		path = append(path, nodes[nextNodeId].Name)
 		currentIndex = nextNodeId
 		n++
 	}

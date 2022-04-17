@@ -27,6 +27,5 @@ func main() {
 		fmt.Printf("The shortest path from %v to %v has length %v and is defined as follows:\n", result.Src, result.Dst, result.Weight)
 		fmt.Println(result.Path)
 		fmt.Println("\n")
-
 	}
 }
